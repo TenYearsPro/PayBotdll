@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RootNamespace>GBot.Plugins.EpayShop</RootNamespace>
+    <AssemblyName>PayBot</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.2">
+      <ExcludeAssets>runtime;native</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+    <ProjectReference Include="..\..\src\GBot.PluginAbstractions\GBot.PluginAbstractions.csproj" Condition="Exists('..\..\src\GBot.PluginAbstractions\GBot.PluginAbstractions.csproj')">
+      <Private>false</Private>
+    </ProjectReference>
+    <Reference Include="GBot.PluginAbstractions" Condition="!Exists('..\..\src\GBot.PluginAbstractions\GBot.PluginAbstractions.csproj')">
+      <HintPath>lib\GBot.PluginAbstractions.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

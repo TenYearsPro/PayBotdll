@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+dist/
+_tmp_inspect/
+*.zip
+*.dll.new
+*.dll.new.bak*
